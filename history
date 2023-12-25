@@ -1,0 +1,23 @@
+01:59:20　本番環境に公開しよう (  
+
+ • 【Docker超入門 #8】本番環境に公開しよう  )
+ 
+ # gitの設定
+126  git config --global merge ff.false
+  127  git config --global merge.ff false
+  128  git config --global pull.rebase merges
+  129  git config list
+  130  git config --list
+  # ターミナルの名前変更
+  131  export PS1="%1~ %# "\n
+  132  source ~/.zshrc
+  # へーロク入れる
+  133  brew tap heroku/brew && brew install heroku
+  134  heroku login
+  135  heroku container:login
+  136  heroku create rails-docker-kyt
+  137  heroku create rails-docker-nikotama
+  138  heroku addons:create cleardb:ignite -a rails-docker-nikotama
+  139  heroku config -a rails-docker-nikotama
+  140  ls
+  141  code history
